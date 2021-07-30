@@ -98,6 +98,46 @@ vim. To do that, use ``gh config set editor vim``.
 ## Usage
 
 See the [GitHub CLI documentation](https://cli.github.com/manual/) for details.
-This is has some notes and highlights.
+To get to a list of actions and options, click on "CLI manual menu" at the
+bottom of the page. This is has some notes and highlights.
 
+``gh`` lets you interact with issues, pull requests, etc directly in the
+terminal. For example, to create an issue, we can do something like
 
+```sh
+gh issue create --label "help wanted" --title "Creating issue with gh" --body "Did this work?"
+```
+
+Then you can see on the GitHub repo that this issue was created as intended!
+Pretty slick. We can comment on an issue (note the issue number from the
+issue creation):
+
+```sh
+gh issue comment 1 --body "Yeah, it looks like it worked."
+```
+
+And we can print out the issue locally:
+
+```sh
+gh issue view 1
+```
+
+And even close it:
+
+```sh
+gh issue close 1
+```
+
+You can view PRs, much the same as issues, using ``gh pr view``. You can create
+PRs as well (check out the [docs](https://cli.github.com/manual/gh_pr_create)).
+
+With pull requests, a common thing to do is check out a PR that someone else
+has opened. Maybe you want to add some edits to it, or just want to test it out
+locally. The CLI client makes it really easy. We can list all PRs, view
+a specific PR, and then even check it out locally:
+
+```sh
+gh pr list
+gh pr view {PR number}
+gh pr checkout {PR number}
+```
