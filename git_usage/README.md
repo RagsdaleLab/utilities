@@ -141,3 +141,13 @@ gh pr list
 gh pr view {PR number}
 gh pr checkout {PR number}
 ```
+
+Now you can play around with changes in the chosen PR that is waiting to be
+merged. If you make some new changes of your own that you want to push to
+that PR, it should be as simple as
+
+```sh
+git add {changed file(s)}
+git commit -m "some changes added by {me}"
+git push upstream {PR branch name}
+```
