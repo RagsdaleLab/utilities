@@ -1,0 +1,75 @@
+---
+output:
+  bookdown::pdf_document2:
+    latex_engine: xelatex
+    toc: no
+    number_sections: false
+    keep_tex: true
+    includes:
+      in_header: "sipreamble.tex"
+    extra_dependencies: ["float"]
+bibliography: "references.bib"
+title: Supporting Information for "A genetics-style document using RMarkdown"
+author:
+  - Aaron P. Ragsdale
+date:
+  - \today
+---
+
+```{r sisetup, echo=F}
+options(tinytex.clean = FALSE)
+```
+
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\theequation}{S\arabic{equation}}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\setcounter{equation}{0}
+
+# The diffusion equation and moment system for the two-locus sampling distribution
+
+The two-locus diffusion equation with additive selection was first described by
+@Kimura1955-qe and studied extensively in the 1960s and 70s [e.g., @Ohta1969-ie].
+
+\clearpage
+\newpage
+
+# Supplementary Tables
+
+```{r 1kgpops, echo=F, tab.align="center"}
+library(knitr)
+library(kableExtra)
+pops <- read.csv("tables/populations.txt", sep=";", header=TRUE, check.names=FALSE)
+knitr::kable(pops, "latex", booktabs=T,
+    caption="Thousand Genomes Project population descriptions for populations used in this study.") %>%
+kable_styling(latex_options = "HOLD_position")
+```
+
+```{r msldfe, echo=F, tab.align="center"}
+library(knitr)
+library(kableExtra)
+dfes <- read.csv("tables/msl_dfes.txt", sep=";", header=TRUE, check.names=FALSE)
+knitr::kable(dfes, "latex", booktabs=T, escape=FALSE,
+    linesep = c("", "", "\\addlinespace"),
+    caption="DFEs inferred for missense and loss-of-function variants in MSL for varying values of $h$. General patterns are consistent across different chosen values of $h$, although $h=0$ results in poorer fits for both missense and LOF variants. Columns to the right of the log-likelihood (LL) column show proportions of new mutations with $|s|$ in each given bin.") %>%
+kable_styling(latex_options = c("HOLD_position", "repeat_header"))
+```
+
+\clearpage
+\newpage
+
+# Supplementary Figures
+
+```{r fig2, echo=F, fig.cap="(ref:figS1)", fig.align="center"}
+knitr::include_graphics("figures/fig2.pdf")
+```
+
+(ref:figS1) The distribution at stationarity of AB haplotype counts in a
+sample size of 30, in which we observe 10 $A$ alleles at the left locus, and 10
+$B$ alleles at the right locus.
+
+\clearpage
+\newpage
+
+# References

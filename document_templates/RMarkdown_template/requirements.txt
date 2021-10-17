@@ -1,0 +1,4 @@
+r-bookdown
+r-rmarkdown
+r-knitr
+r-kableExtra
