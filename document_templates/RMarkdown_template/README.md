@@ -17,9 +17,9 @@ conda install --file requirements.txt
 
 The required R packages are
 
-• bookdown
-* `rmarkdown`
-• knitr
+* bookdown
+* rmarkdown
+* knitr
 * kableExtra
 
 ## build
