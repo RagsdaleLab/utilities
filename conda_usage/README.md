@@ -28,11 +28,22 @@ unset __conda_setup
 
 Log out, then log in.
 
+If you are using Linux:
+
 ```sh
 # Get latest Py 3.8, 64 bit
 curl -L https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh > Miniconda3-latest-Linux-x86_64.sh
 # Install and say yes to everything
 bash Miniconda3-latest-Linux-x86_64.sh
+```
+
+Or Mac:
+
+```sh
+# Get latest Py 3.8, 64 bit
+curl -L https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh > Miniconda3-latest-MacOSX-x86_64.sh
+# Install and say yes to everything
+bash Miniconda3-latest-MacOSX-x86_64.sh
 ```
 
 Log out, then in again.  Or, `source .bashrc` (that re-inits the user shell).
