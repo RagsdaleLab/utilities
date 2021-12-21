@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[]{article}
 \usepackage[round]{natbib}
 
 \usepackage{fullpage}
@@ -16,11 +16,15 @@
 % local definitions
 \newcommand{\comment}[1]{{\textcolor{red}{Comment: #1}}}
 
+% cross-reference with supplement
+\usepackage{xr}
+\externaldocument{supplement}
+
 \begin{document}
 
 \title{An article template}
 \author[1,*]{The Author}
-\affil[1]{Birge Hall}
+\affil[1]{Planet Earth}
 \affil[*]{email@address.edu}
 \maketitle
 
@@ -72,8 +76,14 @@ Place figures below, where you can see Fig.~\ref{fig:1}:
 
 \lipsum[1]
 
+We can even reference a table in the supplement, say Table~\ref{tab:1kgpops}.
+
+\break
+
 \bibliographystyle{plainnat}
 \bibliography{paper}
+
+\break
 
 \renewcommand{\theequation}{A\arabic{equation}}
 \renewcommand{\thefigure}{A\arabic{figure}}

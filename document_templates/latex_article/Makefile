@@ -1,6 +1,9 @@
 paper.pdf: paper.tex paper.bib
 	pdflatex paper.tex
 	bibtex paper
+	pdflatex supplement.tex
+	bibtex supplement
+	pdflatex supplement.tex
 	pdflatex paper.tex
 
 paper.ps: paper.dvi
