@@ -113,3 +113,9 @@ And at the end of your `.bashrc` or `.bash_profile`, place:
 # .vimrc
 
 See the `.vimrc` file here.
+
+This requires installing some packages, such as `vundle`:
+
+```sh
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
