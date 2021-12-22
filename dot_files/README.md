@@ -119,3 +119,9 @@ This requires installing some packages, such as `vundle`:
 ```sh
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
+
+Then to install the plugins, enter `vim` and types `:PluginInstall`.
+
+Now, for example, when editing a latex document in vim, you'll be able to type `\cite{}<F9>`
+and pull up entries in your bib file to choose from. If you want to just get a subset, you
+can do `\cite{Kimu<F9>` to bring up all of Kimura's papers that are in your bib file.
