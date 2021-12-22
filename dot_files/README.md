@@ -109,3 +109,7 @@ And at the end of your `.bashrc` or `.bash_profile`, place:
 ```sh
 . ~/.bash_prompt
 ```
+
+# .vimrc
+
+See the `.vimrc` file here.
