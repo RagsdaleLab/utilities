@@ -152,7 +152,7 @@ git commit -m "some changes added by {me}"
 git push upstream {PR branch name}
 ```
 
-## Changing the name of a branch
+# Changing the name of a branch
 
 We many want to change the name of a branch, such as changing "master" to "main" (for example,
 [see here](https://sfconservancy.org/news/2020/jun/23/gitbranchname/)). It's quite simple:
