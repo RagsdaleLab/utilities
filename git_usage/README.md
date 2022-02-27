@@ -151,3 +151,24 @@ git add {changed file(s)}
 git commit -m "some changes added by {me}"
 git push upstream {PR branch name}
 ```
+
+## Changing the name of a branch
+
+We many want to change the name of a branch, such as changing "master" to "main" (for example,
+[see here](https://sfconservancy.org/news/2020/jun/23/gitbranchname/)). It's quite simple:
+
+To change it locally:
+
+```sh
+git branch -m master main
+```
+
+And then to change it remotely:
+
+```sh
+git push -u origin main
+git push origin --delete master
+```
+
+Note that you many need to change the selected default branch in the browser.
+See [here](https://www.git-tower.com/learn/git/faq/git-rename-master-to-main) for more details.
